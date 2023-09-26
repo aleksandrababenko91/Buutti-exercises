@@ -1,0 +1,1 @@
+console.log("Ensimainen exercise DONE");
