@@ -22,9 +22,9 @@ For example, exponentiating 50 with 0.9 could be called
 let firstPlayerIncomes = 120;
 let secondPlayerIncomes = 200;
 let exponent = 0.9;
-let incomesAfterExponentFirst;
-let incomesAfterExponentSecond;
 
+incomesAfterExComponentFirst = firstPlayerIncomes;
+incomesAfterExComponentSecond = secondPlayerIncomes;
 
 //progressive taxing
 if (firstPlayerIncomes > 100) {
