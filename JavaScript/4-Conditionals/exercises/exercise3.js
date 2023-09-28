@@ -10,3 +10,4 @@ console.log(result);
 age = 15;
 result = age >= 20  ?  "Awesome!"  :  "Keep practising";
 console.log(result);
+
