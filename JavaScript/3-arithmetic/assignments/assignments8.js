@@ -21,12 +21,12 @@ For example, exponentiating 50 with 0.9 could be called
 
 let firstPlayerIncomes = 120;
 let secondPlayerIncomes = 200;
-let exponent = 0.9;
+let exponent = 0.9;  
 
-incomesAfterExComponentFirst = firstPlayerIncomes;
-incomesAfterExComponentSecond = secondPlayerIncomes;
+let incomesAfterExponentFirst = firstPlayerIncomes;
+let incomesAfterExponentSecond = secondPlayerIncomes;
 
-//progressive taxing
+//progressive taxing for first player
 if (firstPlayerIncomes > 100) {
     incomesAfterExponentFirst = firstPlayerIncomes ** exponent;
     console.log(incomesAfterExponentFirst);
@@ -34,7 +34,7 @@ if (firstPlayerIncomes > 100) {
     console.log(firstPlayerIncomes);
 }
 
-
+//progressive taxing for second player
 if (secondPlayerIncomes > 100) {
     incomesAfterExponentSecond = secondPlayerIncomes ** exponent;
     console.log(incomesAfterExponentSecond);
@@ -42,12 +42,11 @@ if (secondPlayerIncomes > 100) {
     console.log(secondPlayerIncomes);
 }
 
-
-//diifference between players
-
+//difference between players
 let differenceIncomes = secondPlayerIncomes - firstPlayerIncomes;
 
-let diffentAfterExponetions = incomesAfterExponentSecond - incomesAfterExponentFirst;
+let differentAfterExponentiations = incomesAfterExponentSecond - incomesAfterExponentFirst;
 
 console.log(differenceIncomes);
-console.log(diffentAfterExponetions);
+console.log(differentAfterExponentiations);
+
