@@ -12,22 +12,24 @@ let num10 = "lokakuu";
 let num11 = "marraskuu";
 let num12 = "joulukuu";
 
-if (num1 || num3 || num5 || num7 || num8 || num10 || num12)
-{
+const kuukausi = "maaliskuu";
+if (kuukausi === num1 || kuukausi === num3 || kuukausi === num5 || kuukausi === num7 || kuukausi === num8 || kuukausi === num10 || kuukausi === num12) {
     console.log("Tässä kuukaudessa 31 päivää");
 }
-if (num4 || num6 || num9 || num11) {
+
+const kuukausi1 = "marraskuu";
+if (kuukausi1 === num4 || kuukausi1 === num6 || kuukausi1 === num9 || kuukausi1 === num11) {
     console.log("Tässä kuukaudessa 30 päivää");
 }
-
-if (num2) {
+const kuukausi2 = "helmikkuu"
+if (kuukausi2 === num2) {
     console.log("Tässä kuukaudessa 29 päivää");
 }
 
 
-const kuukausi = "tammikuu";
-        switch (kuukausi) {
-            case "tammikuu":
+const kuukausi3 = "tammikuu";
+    switch (kuukausi3) {
+        case "tammikuu":
             console.log("Tässä kuukaudessa 31 päivää");
             break;
         case "maaliskuu":
@@ -35,7 +37,7 @@ const kuukausi = "tammikuu";
             break;
         case "toukukuu":
             console.log("Tässä kuukaudessa 31 päivää");
-                break;
+            break;
         case "heinäkuu":
             console.log("Tässä kuukaudessa 31 päivää");
             break;
@@ -55,15 +57,15 @@ const kuukausi = "tammikuu";
             console.log("Tässä kuukaudessa 30 päivää");
             break;
         case "syyskuu":
-                console.log("Tässä kuukaudessa on 30 päivää");
-                break;
+            console.log("Tässä kuukaudessa on 30 päivää");
+            break;
         case "marraskuu":
-                console.log("Tässä kuukaudessa on 30 päivää");
-                break;
+            console.log("Tässä kuukaudessa on 30 päivää");
+            break;
         case "helmikkuu":
             console.log("Tässä kuukaudessa on 28 päivää");
             break;
-            default:
-                console.log("Unknown language");
+        default:
+            console.log("Unknown language");
     }
 

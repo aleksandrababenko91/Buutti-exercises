@@ -26,11 +26,11 @@ let score = 4;
 let hoursPlayed = 5;
 let price = 20;
 
-if ((score >= 4 && price <= 0) || 
-(score === 4 && (price / hoursPlayed >= 4)) || 
-(score === 5 && (price / hoursPlayed >= 2))) {
+if ((score >= 4 && price / hoursPlayed >= 4) || (score === 5 && price / hoursPlayed >= 2)) {
     console.log("A game is determined to be worth its price");
-}
-else {
+  } else {
     console.log("Not worth");
-}
+  }
+  
+
+

@@ -11,21 +11,13 @@ let checkBalance = false;
 
 if (!checkBalance) {
     console.log("Have a nice day");
-}
-
-else if (checkBalance && isActive && balance > 0) {
+} else if (checkBalance && isActive && balance > 0) {
     console.log(balance);
-}
-
-else if (checkBalance && !isActive) {
+} else if (checkBalance && !isActive) {
     console.log("Your account is not Active");
-}
-
-else if (checkBalance && isActive &&  balance === 0) {
+} else if (checkBalance && isActive &&  balance === 0) {
     console.log("Your account is Empty");
-}
-
-else if (checkBalance && isActive && balance < 0) {
+} else if (checkBalance && isActive && balance < 0) {
     console.log("Balance is Negative");
 }
 
