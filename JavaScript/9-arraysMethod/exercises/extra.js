@@ -6,19 +6,9 @@ const users = [{ firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Res
                { firstName: 'Wes', lastName: 'Reid', role: 'Instructor'},
                { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor'}];
 
-//lastNames
-let usersLastNames = users.map(user => user.lastName)
-console.log(usersLastNames);
-
-//FullStach Developer
-let usersFullStack = users.filter(function(user) {
-return user.role === "Full Stack Resident"
+let instructors = users.filter(function(user) {
+return user.role === "Instructor"
 });
-    
-console.log(usersFullStack);
-
-
-//List all Instructors’ full names (e.g., “Wes Reid”)
- let instructorsNameandSurname = users.filter(user => user.role === "Instructor")
-    console.log(instructorsNameandSurname);
-
+    console.log(instructors); 
+let instructorsLastAndFirstName = instructors.map(user => user.firstName + " " + user.lastName)
+console.log(instructorsLastAndFirstName);
