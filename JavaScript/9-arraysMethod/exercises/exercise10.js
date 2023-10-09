@@ -19,6 +19,10 @@ console.log(usersFullStack);
 
 
 //List all Instructors’ full names (e.g., “Wes Reid”)
- let instructorsNameandSurname = users.filter(user => user.role === "Instructor")
-    console.log(instructorsNameandSurname);
 
+let instructors = users.filter(function(user) {
+return user.role === "Instructor"
+});
+    console.log(instructors); 
+let instructorsLastAndFirstName = instructors.map(user => user.firstName + " " + user.lastName)
+console.log(instructorsLastAndFirstName);
