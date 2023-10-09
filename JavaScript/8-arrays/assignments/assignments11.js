@@ -1,30 +1,43 @@
-EXTRA: Assignment 11 (Command list, now with more arrays)
-We can also put functions into arrays.
-
-Create a program where we have variables x and y coordinates representing the position of a robot,
- and a command string that tells the robot where it should move.
-
-The robot has the following command string:
-
+let x = 0;
+let y = 0;
 const commandList = "NNEESSWWCNNEEENNNCEESSSWNNNECEESWWNNNEEEBENNNEEE";
+const commandCodes = {n : 0, e : 1, s : 2, w : 3, c : 4, b : 5};
+const numbersArray = [];
+for(i = 0; i < commandList.length; i++) {
+   let currentLetter = commandList[i];
+   //console.log(currentLetter);
+   let commandCode = commandCodes[currentLetter.toLowerCase()];
+ //console.log(commandCode);
+ numbersArray.push(commandCode);
 
-Go through this command string and convert it into an array of numbers, so that:
+}
+console.log(numbersArray);
 
-N is turned to 0
-E is turned to 1
-S is turned to 2
-W is turned to 3
-C is turned to 4
-B is turned to 5
-Then create an array of functions where:
+function incrementY(){
+y = y + 1;
+}
+function incrementX(){
+x = x + 1;
+}
 
-element 0 is a function that increments Y
-element 1 is a function that increments X
-element 2 is a function that decrements Y
-element 3 is a function that decrements X
-element 4 is a function that does nothing
-The number 5 is a special case: if found, the remaining commands are skipped. It doesn't need to exist in the function array.
+function decrementY(){
+y = y - 1;
+}
+function decrementX(){
+x = x - 1;
+}
+function doNothing(){
+return null;
+}
 
-Then, use a loop to go through your command list, now converted into an array of numbers, and call functions from the function array depending on the number of each element in the command array.
+const functionsArray = [incrementY, incrementX, decrementY, decrementX, doNothing];
 
-Print the final values of X and Y once the string has been processed.
+for(let i = 0; i < numbersArray.length; i++){
+    let number = numbersArray[i];
+    let currentFunction = functionsArray[number];
+    if(currentFunction){
+    currentFunction();
+    }
+}
+
+console.log(x, y);

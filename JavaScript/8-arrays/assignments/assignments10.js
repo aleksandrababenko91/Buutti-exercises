@@ -1,29 +1,21 @@
-/*Assignment 10 (Count letters, advanced)
-Create a function getCountOfLetters that calculates the count of each letter 
-in a string and returns the information in an array. 
-Use the charIndex object above as a reference for each 
-character's index in the array, 
-but reduce the indexes by one so that 'a' becomes 0, 'b' becomes 1 and so on.
+const charIndex = { a : 1, b : 2, c : 3, d : 4, e : 5, y : 25, z : 26 };
 
-For example:
-
-const result = getCountOfLetters("a black cat");
-console.log(result); // prints [ 3, 1, 2, 0, 0, 0, 0, 0, 0, 0, 1, 1, ... 1, 0, 0, 0, 0, 0, 0  ]
-    // corresponding letters:    a  b  c  d  e  f  g, h, i, j, k, l, ... t, u, v, w, x, y, z */
-
-function getCountOfLetters (string) {
-    let result = "";
-for (i = 0; i < string.length; i++) {
-    if (string.charAt(i) === "h" ) {
-        result++
-    }
-    for (i = 0; i < string.length; i++) {
-        if (string.charAt(i) === "e" ) {
-            result++
+function getCountOfLetters(string) {
+    let result = new Array(30).fill(0);
+    for (let i = 0; i <= string.length; i++){
+        let currentLetter = string[i];
+        //console.log(currentLetter);
+        let currentLetterIndex = charIndex[currentLetter];
+        //console.log(currentLetterIndex);
+        if(currentLetterIndex) {
+            let currentLetterIndexInArray = currentLetterIndex - 1;
+        //console.log(currentLetterIndexInArray);
+        result[currentLetterIndexInArray] = result[currentLetterIndexInArray]  + 1;
         }
+       
+    }
+    console.log(result);
+    return result;
+} 
 
-}
-}
-return result
-}
-console.log(getCountOfLetters("hhhhello"));
+const result = getCountOfLetters("a b ce aaabb ccd yy z");
