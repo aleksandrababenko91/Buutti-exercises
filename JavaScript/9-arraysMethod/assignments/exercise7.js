@@ -7,7 +7,7 @@ console.log(sum);
 const stringConcat = [1,2,3];
 
 const string = stringConcat.reduce((acc, curr) => {
-return acc + "" + curr;
+    return acc + "" + curr;
 });
 console.log(string);
 
@@ -29,13 +29,11 @@ const voters1 = [
 ];
 
 function totalVotes(voters1) {
-
     let votersTrue = voters1.filter(function(voter){
         return voter.voted === true; });
 
     let sumVotersTrue = votersTrue.length
-
-console.log(sumVotersTrue);
+        console.log(sumVotersTrue);
 }
 console.log(totalVotes(voters1)); 
 
@@ -75,14 +73,12 @@ const wishlist = [
     { title: "A second Tesla Model S", price: 90000 }
 ];
 
-
 function shoppingSpree(wishlist){
     let priceItems = wishlist.map(item => item.price)
     //console.log(totalCost)
     
     let totalCost = priceItems.reduce((acc, curr) => acc + curr);
     console.log(totalCost);
-
 }
 shoppingSpree(wishlist);
 

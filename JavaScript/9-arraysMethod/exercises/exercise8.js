@@ -16,6 +16,6 @@ console.log(lengthOfAnimalsNames);*/
 
 const animalsWithLetterO = animals.map(animal => {
 	if (animal[1].includes("o"))
-	console.log(animal, true);
+		console.log(animal, true);
 })
 

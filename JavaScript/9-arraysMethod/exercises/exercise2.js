@@ -1,5 +1,3 @@
-
-
 const numbers = [5, 13, 2, 10, 8];
 let product = 1;
 sum = 0;

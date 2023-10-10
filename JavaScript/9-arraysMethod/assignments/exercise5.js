@@ -6,8 +6,9 @@ const students = [ { name: "Sami", score: 24.75 },
                    { name: "Yrjö", score: 14.5  } ];
 
 function getGrades(students) {
-    let studentsGrades = students.map(student =>  {
+    let studentsGrades = students.map(student => {
         let grade;
+
         if (student.score < 14) {
            grade = 0;
         } else if (student.score >= 14 && student.score <= 17 ) {
@@ -22,9 +23,9 @@ function getGrades(students) {
             grade = 5;
         }
         return {name : student.name, grade: grade}
-        }); 
-        return studentsGrades;
-        }
+    }); 
+    return studentsGrades;
+}
 
 const newGrades = getGrades(students);
 console.log(newGrades);

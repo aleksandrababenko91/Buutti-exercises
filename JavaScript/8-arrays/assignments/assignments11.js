@@ -5,6 +5,9 @@ const commandCodes = {n : 0, e : 1, s : 2, w : 3, c : 4, b : 5};
 const numbersArray = [];
 for(i = 0; i < commandList.length; i++) {
    let currentLetter = commandList[i];
+   if (currentLetter === "B") {
+    break;
+   }
    //console.log(currentLetter);
    let commandCode = commandCodes[currentLetter.toLowerCase()];
  //console.log(commandCode);
