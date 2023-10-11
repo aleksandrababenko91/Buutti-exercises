@@ -5,7 +5,6 @@ console.log(sum);
 
 //2
 const stringConcat = [1,2,3];
-
 const string = stringConcat.reduce((acc, curr) => {
     return acc + "" + curr;
 });
@@ -49,7 +48,7 @@ const wishlist1 = [
 
 function shoppingSpree(wishlist1) {
     let totalcost = wishList1.reduce((acc, curr) => {
-        return acc + curr
+        return acc + curr;
     });
 }
 console.log(shoppingSpree(wishlist1)); // 227005
@@ -75,10 +74,10 @@ const wishlist = [
 
 function shoppingSpree(wishlist){
     let priceItems = wishlist.map(item => item.price)
-    //console.log(totalCost)
+        //console.log(totalCost)
     
     let totalCost = priceItems.reduce((acc, curr) => acc + curr);
-    console.log(totalCost);
+        console.log(totalCost);
 }
 shoppingSpree(wishlist);
 
@@ -100,32 +99,24 @@ const voters = [
 
 
 function voterResults(voters){
-
-let votedPeople = voters.filter(people => people.voted === true)
-//console.log(votedPeople);
-
-let votedYoung = votedPeople.filter(people => people.age > 18 && people.age < 25)
-//console.log("Young Voted People: " + votedYoung.length);
-
-let votedMidAge = votedPeople.filter(people => people.age > 26 && people.age < 35)
-//console.log("Mid Voted People: " + votedMidAge.length);
-
-let votedOld = votedPeople.filter(people => people.age > 36 && people.age < 55)
-//console.log("Old Voted People: " + votedOld.length);
-
-let numYoungsPeople = voters.filter(people => people.age > 18 && people.age < 25 )
-//console.log("Young People: " + numYoungsPeople.length)
-
-let numMidsPeople = voters.filter(people => people.age > 26 && people.age < 35 )
-//console.log("Mid People: " + numMidsPeople.length)
-
-let numOldsPeople = voters.filter(people => people.age > 36 && people.age < 55)
-//console.log("Old People: " + numOldsPeople.length)
+    let votedPeople = voters.filter(people => people.voted === true);
+        //console.log(votedPeople);
+    let votedYoung = votedPeople.filter(people => people.age > 18 && people.age < 25);
+        //console.log("Young Voted People: " + votedYoung.length);
+    let votedMidAge = votedPeople.filter(people => people.age > 26 && people.age < 35);
+        //console.log("Mid Voted People: " + votedMidAge.length);
+    let votedOld = votedPeople.filter(people => people.age > 36 && people.age < 55);
+        //console.log("Old Voted People: " + votedOld.length);
+    let numYoungsPeople = voters.filter(people => people.age > 18 && people.age < 25);
+        //console.log("Young People: " + numYoungsPeople.length)
+    let numMidsPeople = voters.filter(people => people.age > 26 && people.age < 35 );
+        //console.log("Mid People: " + numMidsPeople.length)
+    let numOldsPeople = voters.filter(people => people.age > 36 && people.age < 55);
+        //console.log("Old People: " + numOldsPeople.length)
 
 
 return { votedYoung: votedYoung.length, votedMidAge: votedMidAge.length, 
     votedOld: votedOld.length, numYoungsPeople: numYoungsPeople.length, 
     numMidsPeople: numMidsPeople.length, numOldsPeople: numOldsPeople.length};
-
 }
 console.log(voterResults(voters));

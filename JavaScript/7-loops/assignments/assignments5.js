@@ -6,3 +6,4 @@ while (sum < 10000) {
    sum += n;
 }
 console.log("The last number is " + n);
+

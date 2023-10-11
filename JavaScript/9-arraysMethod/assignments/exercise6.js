@@ -15,9 +15,8 @@ for (let i = 0; i < objectArray.length; i++) {
      let currentObject = objectArray[i];
      if (currentObject !== null && currentObject.toDelete === true) {
           //console.log(currentObject);
-     
-     objectArray[i] = null;
-     console.log("Array after modify: ", objectArray);
+          objectArray[i] = null;
+          console.log("Array after modify: ", objectArray);
      }
 }
 

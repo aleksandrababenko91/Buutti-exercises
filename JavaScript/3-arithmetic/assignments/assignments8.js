@@ -19,7 +19,7 @@ PS. Exponentiation is also called raising a number to a power.
 For example, exponentiating 50 with 0.9 could be called 
 "raising 50 to the power of 0.9".*/
 
-let firstPlayerIncomes = 120;
+let firstPlayerIncomes = 90;
 let secondPlayerIncomes = 200;
 let exponent = 0.9;  
 

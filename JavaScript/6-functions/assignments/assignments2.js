@@ -7,3 +7,5 @@ let result1 = minimum(3, 4, 5);
 let result2 = minimum(67, 46, 38);
 console.log(result1);
 console.log(result2);
+
+
