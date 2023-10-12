@@ -1,7 +1,7 @@
 function reverseWord(word) {
     let reversedWord = "";
     let index = word.length; 
-
+    console.log(index);
     while (index > 0) { 
         reversedWord += word[ index - 1 ];
         index = index - 1;
@@ -17,3 +17,4 @@ for (let i = 0; i < wordsArray.length; i++) {
     reversedSentence = reversedSentence + reverseWord(wordsArray[i]) + " ";
 }
 console.log(reversedSentence);
+
