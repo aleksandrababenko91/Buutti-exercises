@@ -1,12 +1,5 @@
-/*function sentencify(wordArray, index) {
-    let string = "";
-    for (i = index; i < wordArray.length; i++) {
-        string += wordArray[i] + " ";
-    }
-    return (string);   
-}
-;*/
 const wordArray = [ "The", "quick", "silver", "wolf" ];
+
 function sentencify(array, index) {
     if (index === wordArray.length - 1) {
         return wordArray[index] + "!";

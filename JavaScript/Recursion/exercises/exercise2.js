@@ -12,9 +12,9 @@ console.log(sum(4));   // function called 10 times*/
 function sum (n) {
     console.log(n)
     if (n <= 0) {
-        return 0
+        return 0;
     } else { 
-        return n + sum(n - 1)
+        return n + sum(n - 1);
     }
 }
 console.log(sum(10));  // function called 55 times*/
