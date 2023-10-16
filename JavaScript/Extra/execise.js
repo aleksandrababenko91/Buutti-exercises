@@ -1,4 +1,4 @@
-//Write a JavaScript function that reverses a number.
+/*//Write a JavaScript function that reverses a number.
 
 const numbers = 32243;
 let numToString = numbers.toString();
@@ -43,4 +43,15 @@ function returnTheType(values) {
     }
     return typesOfValues;
 }
-console.log("All DataTypes: ", returnTheType(allValues));
+console.log("All DataTypes: ", returnTheType(allValues));*/
+
+//Write a program that outputs the following. Use for-loops for this task.
+
+let a = 10;
+let printTriangle = "";
+for(i = "*"; i <= 10; i++) {
+    i++;
+    printTriangle += i + "";
+    console.log(printTriangle);
+}
+console.log(printTriangle);
