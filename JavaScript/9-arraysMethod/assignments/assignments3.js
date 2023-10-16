@@ -7,20 +7,21 @@ const games = [
     { id: 2221358512, date: "2022-11-02", score: 197, won: false },
     { id: 1847684969, date: "2022-11-03", score: 203, won: true } 
 ];
+
 //a
-let winners = games.filter(function(player){
-    return player.won === true;
+let wonGames = games.filter(function(game) {
+    return game.won === true;
 });
-let sum = 0; 
-let scoreOfwinners = winners.map(player => player.score++);
-scoreOfwinners.forEach(player => sum += player);
-console.log(sum/4);
+console.log("All games that the player has won: ", wonGames);
+
+let sumScoreOfWonGames = wonGames.reduce((acc, curr) => acc + curr.score, 0);
+console.log("Average score of WON Games: ", sumScoreOfWonGames/wonGames.length);
 
 //b 
-let loosers = games.filter(function(player) {
-    return player.won === false;
+let lostGames = games.filter(function(game) {
+    return game.won === false;
 });
-let sumOfscore = 0;
-let scoreOfLoosers = loosers.map(player => player.score++);
-scoreOfLoosers.forEach(player => sumOfscore += player);
-console.log(sumOfscore/3);
+console.log("All games that the player has lost: ", lostGames);
+
+let sumScoreOfLostGames = lostGames.reduce((acc, curr) => acc + curr.score, 0);
+console.log("Average score of LOST Games: ", sumScoreOfLostGames/lostGames.length);

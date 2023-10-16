@@ -2,6 +2,7 @@ const charIndex = { a : 1, b : 2, c : 3, d : 4, e : 5, y : 25, z : 26 };
 
 function getCountOfLetters(string) {
     let result = new Array(30).fill(0);
+    //console.log(result);
     for (let i = 0; i <= string.length; i++){
         let currentLetter = string[i];
         //console.log(currentLetter);

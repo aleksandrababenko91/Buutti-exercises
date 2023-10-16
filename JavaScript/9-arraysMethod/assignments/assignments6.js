@@ -10,24 +10,23 @@ const objectArray = [
      { x: 24, y: 31, type: "rock", toDelete: false } 
 ];
 //a
-console.log("Array before modify", objectArray);
+//console.log("Array before modify", objectArray);
 for (let i = 0; i < objectArray.length; i++) {
-     let currentObject = objectArray[i];
-     if (currentObject !== null && currentObject.toDelete === true) {
+     if (objectArray[i] !== null && objectArray[i].toDelete === true) {
           //console.log(currentObject);
           objectArray[i] = null;
-          console.log("Array after modify: ", objectArray);
      }
 }
+console.log("Array after modify: ", objectArray);
 
 //b
 let newArray = objectArray.map(item => {
      if (item !== null && item.toDelete === true) {
-          return null
+          return null;
      }
-     return item
+     return item;
 });
-console.log(newArray)
+console.log("New Array after Modify in newarray, using map: ", newArray);
  
 //c
 /*Its depend how we use arrays, 

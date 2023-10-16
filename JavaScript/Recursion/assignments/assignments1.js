@@ -8,8 +8,6 @@ return (F(num - 2) * 3) + F(num - 1);
 }
 console.log(F(17));  //399331
 
-
-
 function F(num) {
     if (num === 0) {
         return num;

@@ -8,8 +8,7 @@ function sortNumberArray (array) {
             }
         }
     }
-    console.log(array);
+    return array;
 }
 const array = [ 4, 19, 7, 1, 9, 22, 6, 13 ];
-sortNumberArray(array);
-console.log(array);
+console.log("Sorted array: ", sortNumberArray(array));

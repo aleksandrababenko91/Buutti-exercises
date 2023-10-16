@@ -8,20 +8,20 @@ const games = [
     { id: 1847684969, date: "2022-11-03", score: 203, won: true } 
 ];
 
-//find player 
-let findId = games.filter(function(player) {
-    return player.id === 1958468135
+// a. 
+
+console.log("Found game with id = 1958468135: ");
+let findId = games.find(function(game) {
+    return game.id === 1958468135
 });
 console.log(findId);
 
 ///findIndex  of first winner
-
-//a
-let firtsWonGame = games.map(player => player.won).findIndex(function(player){
-    return player === true;
+console.log("Found Index of first Won game: ")
+let firtsWonGame = games.findIndex(function(game) {
+    return game.won === true;
 });
-console.log(firtsWonGame)
+console.log(firtsWonGame);
 
-//Second Solution
-let firtsWonGameIndex = games.map(player => player.won).indexOf(true);
-console.log(firtsWonGameIndex)
+
+

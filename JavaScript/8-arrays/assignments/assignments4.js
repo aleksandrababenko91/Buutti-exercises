@@ -9,7 +9,7 @@ Afterwards, use Array.splice to remove the item.*/
 
 const fruits = ["banana", "apple", "grapefruit", "pear", "pineapple", "lemon"];
 
-let index = fruits.indexOf("pear", 0);
-let removed = fruits.splice(3, 1)
+let index = fruits.indexOf("pear");
+fruits.splice(index, 1);
 
 console.log(fruits);

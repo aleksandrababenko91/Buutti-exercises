@@ -3,14 +3,15 @@ const students = [ { name: "Sami", score: 24.75 },
                    { name: "Jyrki", score: 27.5 },
                    { name: "Helinä", score: 26.0 },
                    { name: "Maria", score: 17.0 },
-                   { name: "Yrjö", score: 14.5  } ];
+                   { name: "Yrjö", score: 14.5  } 
+                ];
 
 function getGrades(students) {
     let studentsGrades = students.map(student => {
         let grade;
 
         if (student.score < 14) {
-           grade = 0;
+            grade = 0;
         } else if (student.score >= 14 && student.score <= 17 ) {
             grade = 1;
         } else if(student.score > 17 && student.score <= 20) {
@@ -28,5 +29,5 @@ function getGrades(students) {
 }
 
 const newGrades = getGrades(students);
-console.log(newGrades);
+console.log("Array of new objects, where each object contains the student's name and their grade: ", newGrades);
 

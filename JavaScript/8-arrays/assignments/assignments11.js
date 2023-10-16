@@ -97,6 +97,6 @@ for (i = 0; i < array.length; i++) {
 }
 
 
-console.log(x, y);
+console.log(" position of a robot: ", x, y);
 
 
