@@ -1,4 +1,4 @@
-/*//Write a JavaScript function that reverses a number.
+//1Write a JavaScript function that reverses a number.
 
 const numbers = 32243;
 let numToString = numbers.toString();
@@ -17,7 +17,7 @@ function reverseByMethods(nums) { //I dont understand how to make parameters "nu
 console.log("Reversed numbers: ", reverseByMethods(numToString));
 
 
-//Write a JavaScript function that accepts a string as a 
+//2Write a JavaScript function that accepts a string as a 
 //parameter and converts the first letter of each word into upper case.
 const string = "the quick brown fox";
 let newString = "";
@@ -43,15 +43,31 @@ function returnTheType(values) {
     }
     return typesOfValues;
 }
-console.log("All DataTypes: ", returnTheType(allValues));*/
+console.log("All DataTypes: ", returnTheType(allValues));
 
-//Write a program that outputs the following. Use for-loops for this task.
+//4Write a program that outputs the following. Use for-loops for this task.
 
-let a = 10;
+console.log("Print triangle");
 let printTriangle = "";
-for(i = "*"; i <= 10; i++) {
-    i++;
-    printTriangle += i + "";
-    console.log(printTriangle);
+for(let i = 0; i < 10; i++) {
+    printTriangle += "*";
+    console.log(printTriangle); 
 }
-console.log(printTriangle);
+
+
+//5
+let x = 1;
+let y = 1;
+
+function square(x, y) {
+    let result = "";
+    for(i = 0; i < x; i++) {  //row
+        result += "*";
+    } for(j = 0; j < y; j++) { //column
+       console.log(result);
+    }   
+}
+console.log("Print 2 squares")
+square(10, 2);
+square(4, 10);
+
