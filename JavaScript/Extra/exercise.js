@@ -70,6 +70,6 @@ function square(x, y) {
         console.log(result);
     }   
 }
-console.log("Print 2 squares")
+console.log("Print 2 squares");
 square(10, 2);
 square(4, 10);

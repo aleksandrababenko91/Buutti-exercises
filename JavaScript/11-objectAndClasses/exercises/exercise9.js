@@ -1,14 +1,4 @@
-/*If the message given to FlexibleRobot’s handleMessage 
-isn’t recognized by FlexibleRobot, 
-call the handleMessage function of the base Robot 
-class to also allow direct movement along the x and y axes.
-
-Create a new FlexibleRobot object at (0, 0) (x = 0, y = 0) 
-and call its handleMessage function with a fitting 
-parameter 4 times to instruct it to move to (4, 2) (x = 4, y = 2).*/
-
-
-class Robot{
+class Robot {
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -54,7 +44,7 @@ console.log(robot.x, robot.y);
 
 console.log("FlexibleRobot Derived Class Move: ");
 const flexibleRobot1 = new FlexibleRobot(0, 0);
-flexibleRobot1.handleMessage("moveES");
+flexibleRobot1.handleMessage("moveWest");
 console.log(flexibleRobot1.x, flexibleRobot1.y);
 
 console.log("Call its handleMessage function 4 times to move to (4, 2): ");

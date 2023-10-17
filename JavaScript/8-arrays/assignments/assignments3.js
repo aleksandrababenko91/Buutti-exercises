@@ -12,12 +12,12 @@ console.log(array); // prints [ 1, 3, 4, 7, 8, 11, 90 ]*/
 
 
 function insertNumber (array, number) {
-array.push(number);
-array.sort(function(a, b){
-    return a-b;
+    array.push(number);
+    array.sort(function(a, b) {
+        return a-b;
     }
 )
-return array;
+    return array;
 }
 
 const array = [ 1, 3, 4, 7, 11 ];
