@@ -36,8 +36,8 @@ console.log("Capitalized letter of each word: ", convertToUpperCase(string));
 //function, number, string, and undefined.
 
 console.log("Exercise 3: ");
-function returnTheType(values) {
-    return typeof values;
+function returnTheType(value) {
+    return typeof value;
 }
 console.log("All DataTypes: ", returnTheType({age: 32, surname: "Babenko"}));
 console.log("All DataTypes: ", returnTheType(true));
