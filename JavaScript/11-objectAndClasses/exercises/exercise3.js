@@ -20,7 +20,7 @@ console.log(student.name + " got " + found.score + " from " + found.name);
 
 function addCourse(courseName, courseGrade) {
     student.courseScore.push({name: courseName, score: courseGrade});
-    return student.courseScore;
+        return student.courseScore;
 }
 console.log("Added new course: ", addCourse("HTML", 3));
 //console.log(student);

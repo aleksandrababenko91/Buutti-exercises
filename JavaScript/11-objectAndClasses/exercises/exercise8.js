@@ -3,22 +3,22 @@ class Shape {
         this.width = width;
         this.height = height;
     }
-    getArea(area) {
+    getArea() {
         return  0;
     }
 }
 class Rectangle extends Shape {
-    getArea(area) {
+    getArea() {
         return this.width*this.height;
     }
 }
 class Ellipse extends Shape {
-    getArea(area) {
+    getArea() {
         return Math.PI * (this.width / 2) * (this.height / 2);;
     }
 }
 class Triangle extends Shape {
-    getArea(area) {
+    getArea() {
         return (this.width*this.height)/2;
     }
 }

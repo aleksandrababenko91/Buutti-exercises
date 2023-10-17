@@ -17,8 +17,7 @@ console.log("First task: ", student.name, student.age, student.courseScore);
 // 2 Add HTMLBasic co course
 student.courseScore.HTMLBasic = 10;
 console.log("Added HTMLBasic co course: ");
-for (const course in student.courseScore) {   
-    
+for(const course in student.courseScore) {   
     console.log(`${course}: ${student.courseScore[course]}`);
 }
 
@@ -26,6 +25,5 @@ for (const course in student.courseScore) {
 student.courseScore["JavaScript Basics"] = 4; 
 console.log("change Javascript Grade: ");  
 for (const course in student.courseScore) { 
-   
     console.log(`${course}: ${student.courseScore[course]}`);
 }

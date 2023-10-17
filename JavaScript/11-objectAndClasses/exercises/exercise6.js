@@ -3,7 +3,7 @@ class Rectangle {
         this.width = width;
         this.height = height;
     }
-    areaOfRectangle(area) {
+    areaOfRectangle() {
         return this.width*this.height;
     }
 }

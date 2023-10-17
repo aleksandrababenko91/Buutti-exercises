@@ -9,6 +9,5 @@ function printWeight(fruit) {
     console.log("Banana weights " + fruits[fruit] + " grams");
 }
 printWeight("banana");
-
 console.log("List of supported fruits: ", Object.keys(fruits));
 
