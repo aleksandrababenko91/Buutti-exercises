@@ -41,14 +41,15 @@ console.log("The area is ", calcArea(10));
 
 console.log("Exercise 4: ");
 
+let celsius = 220;
 const celsiusToFahrenheit = celsius => {
-    let fahrenheit = celsius/5*9+32;
+    let fahrenheit = (celsius/5*9)+32;
     return {
         F : fahrenheit,
         C : celsius
     }
 }
-const degrees = celsiusToFahrenheit(220);
+const degrees = celsiusToFahrenheit(celsius);
 console.log(degrees.C, "°C is ", degrees.F, "°F");
 
 let fahrenheit = 212; 
