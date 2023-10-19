@@ -26,5 +26,5 @@ console.log(translate("integer"));
 //D
 console.log("Given word does not exist in the dictionary: ");
 const translate1 = word => vocabulary[word] ? vocabulary[word] : null;
-console.log(translate1("fhhfhfhf"));
+console.log("No translation exists for word word given as the argument: ", translate1("fhhfhfhf"));
 
