@@ -1,5 +1,6 @@
 import readline from "readline-sync";
-console.log("Hi! I am a dumb chat bot You can check all the things I can do by typing 'help'");
+console.log("Here´s a list of commands that I can execute! help: Opens this dialog. hello: I will say hello to you.botInfo: I will introduce myself. botName: I will tell my name. botRename: You can rename me. forecast: I will forecast tomorrows weather 100% accurately. I f you want to know is it cloudy, sunny, tempearture, or wind: just print and I'll answer. If you want loggout fron chat: print: quit.");
+
 let counter = 0;
 let botName = "Bob";
 function countAnswers() {
@@ -19,16 +20,16 @@ function forecast() {
     let answer = true;
     while(answer) {
         const temp = readline.question("Tomorrows weather will be....");
-        if(temp === "temperature?") {
+        if(temp === "temperature") {
             console.log(" 20 celsius degree");
             continue;
-        } if(temp === "cloudy?") {
+        } if(temp === "cloudy") {
             console.log("yes");
             continue;
-        } if(temp === "sunny?") {
+        } if(temp === "sunny") {
             console.log("no");
             continue;
-        } if(temp === "wind?") {
+        } if(temp === "wind") {
             console.log("no");
             continue;
         } else {
