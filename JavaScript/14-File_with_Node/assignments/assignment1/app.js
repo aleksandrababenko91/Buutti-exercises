@@ -1,5 +1,5 @@
 import readline from "readline-sync";
-console.log("Here´s a list of commands that I can execute! help: Opens this dialog. hello: I will say hello to you.botInfo: I will introduce myself. botName: I will tell my name. botRename: You can rename me. forecast: I will forecast tomorrows weather 100% accurately. I f you want to know is it cloudy, sunny, tempearture, or wind: just print and I'll answer. If you want loggout fron chat: print: quit.");
+console.log("Here´s a list of commands that I can execute! help: Opens this dialog.");
 
 let counter = 0;
 let botName = "Bob";
@@ -41,7 +41,14 @@ let rightAnswer = true;
 while (rightAnswer) {
     const answer = readline.question("Your question: ");
     if(answer.toLowerCase() === "help") {
-        console.log("Opens this dialog.");
+        console.log("If you type hello: Ill ask your name;\n" +
+            "botInfo: I will introduce myself.\n" +
+            "botName: I will tell my name.\n" +
+            "botRename: You can rename me.\n" +
+            "forecast: I will forecast tomorrows weather 100% accurately.\n" +
+            "If you want to know if it's cloudy, sunny, temperature, or wind,\n" +
+            "just ask and I'll answer.\n" +
+            "If you want to log out from chat, type: quit.");
     } else if(answer.toLowerCase() === "hello") {
         const userName = readline.question("What is your name?");
         console.log(`Hello there, ${userName}!`);

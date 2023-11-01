@@ -1,5 +1,5 @@
 function countDown(callBackFunc, delayTime) {
-    setTimeout(function() {   //setTimeout  is a builtInfunction
+    setTimeout(function() {   
         callBackFunc(); 
     }, delayTime);
 }
@@ -14,5 +14,4 @@ countDown(function() {
             }, 1000);
         }, 1000);
     }, 1000);
-}, 1000);
-   
+}, 1000); 

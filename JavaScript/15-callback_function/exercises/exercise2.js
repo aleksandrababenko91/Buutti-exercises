@@ -1,13 +1,6 @@
 let countDown = new Promise((resolve, reject) => {
-    const result = true;
     setTimeout(() => {
-        if(result === true) {
-            resolve("3");
-        } else {
-            reject(new Error("not executed")); // do I need to use reject, if execute is sucessful?
-        }
-        }, 1000);  
-    
+    }, 1000);  
 });
 countDown.then((result) => {
     console.log(result);
