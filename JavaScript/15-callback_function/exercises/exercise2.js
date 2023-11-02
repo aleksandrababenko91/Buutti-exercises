@@ -1,5 +1,6 @@
 let countDown = new Promise((resolve, reject) => {
     setTimeout(() => {
+        resolve("3");
     }, 1000);  
 });
 countDown.then((result) => {

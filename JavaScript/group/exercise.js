@@ -36,16 +36,7 @@ function printSquare(size) {
     return result;
 }
 
-function bar(x, y) {
-    let output = "";
-    for (let i = 0; i < x; i++) {
-        output += printSquare(y) + "\n";
-    }
-    return output;
-}
 
-let result2 = bar(1, 6);
-console.log(result2);
 
 
 
