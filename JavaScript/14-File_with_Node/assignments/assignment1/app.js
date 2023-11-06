@@ -1,5 +1,5 @@
 import readline from "readline-sync";
-console.log("Here´s a list of commands that I can execute! help: Opens this dialog.");
+console.log("Hi! I am a dumb chat bot. You can check all the things I can do by typing 'help'.");
 
 let counter = 0;
 let botName = "Bob";
