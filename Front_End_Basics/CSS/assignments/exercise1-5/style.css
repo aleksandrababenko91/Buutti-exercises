@@ -8,13 +8,17 @@ p {
     background-color: whitesmoke;
 }
 
-.car {
+div {
     background-color: whitesmoke;
-    margin: 30px 30px 30px 30px;
+    margin: 30px;
+    padding: 20px;
     border-radius: 30px;
-
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
 }
-.Benz {
+
+#Benz {
     background-color: blueviolet;
 }
 
@@ -25,3 +29,4 @@ p {
 img {
    padding: 20px 10px 20px 30px;
 }
+
