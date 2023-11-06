@@ -1,0 +1,27 @@
+body {
+    background-color: burlywood;
+}
+
+p {
+    font-family: 'Caveat', cursive;
+    font-family: 'Libre Baskerville', serif;
+    background-color: whitesmoke;
+}
+
+.car {
+    background-color: whitesmoke;
+    margin: 30px 30px 30px 30px;
+    border-radius: 30px;
+
+}
+.Benz {
+    background-color: blueviolet;
+}
+
+.text {
+    padding: 20px 20px 20px 20px;
+}
+
+img {
+   padding: 20px 10px 20px 30px;
+}

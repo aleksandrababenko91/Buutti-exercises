@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex</title>
+  <style>
+  .container {
+    display: inline-flex;
+    flex-direction: row;
+   }
+  .container > * {          
+    width: 100%;
+    text-align: center;
+    border: 5px solid gold;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div item="one">Modifying the same page that we’ve created, add a flexbox (flex container).</div>
+    <div item="two"> To the container, add 5 div items with text content.</div>
+    <div item="three">First, align the flex items vertically.</div>
+    <div item="four">Modify the CSS to align the items horizontally.</div>
+    <div item="five">Test that it works properly by making the content too wide for a single line.</div>
+  </div>
+</body>
+
+</html>

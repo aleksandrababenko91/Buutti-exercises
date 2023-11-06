@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Grid vs Flexbox</title>
+  <style>
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        border: 3px solid red;
+        background-color: whitesmoke
+    }
+    .text {
+      background-color: goldenrod;
+      border: 3px solid orange;
+      border-radius: 5px;
+      color: red
+    }
+  </style>
+</head>
+    <body>
+  <div class="container">
+    <div class="text">
+      <p>One</p>
+    </div>
+    <div class="text">
+      <p>Two</p>
+    </div>
+    <div class="text">
+      <p>Three</p>
+    </div>
+    <div class="text">
+      <p>Four</p>
+    </div>
+    <div class="text">
+      <p>Five</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
