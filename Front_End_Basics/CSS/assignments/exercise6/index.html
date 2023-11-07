@@ -3,9 +3,67 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cars</title>
-    
-    
+    <title>FlexBox Containers</title>
+<style>
+
+.green-containers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%; 
+}
+.green-containers > * {
+    background-color: greenyellow;
+    width: 8rem;
+    height: 25vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+} 
+.red-containers {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+
+}
+.red-containers > * {
+    background-color: red;
+    height: 12vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+.one {
+   flex-grow: 1;
+}
+.two {
+    flex-grow: 3;
+}
+.three {
+    flex-grow: 1;
+}
+.four {
+    flex-grow: 1;
+}
+.five {
+    flex-grow: 1;
+}
+</style>    
 </head>
 
 <body>
+    <div class="green-containers">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+    </div>
+    <div class="red-containers">
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+        <div class="four">Four</div>
+        <div class="five">Five</div>
+    </div>
+</body>
