@@ -2,13 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexBox Containers</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Containers</title>
+  <style>
+
+.red-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 120px;
+}
+.red-container > * {
+    background-color: red;
+    border: 1px solid black;
+}
+.green-container {
+    display: grid;
+}
+.green-item1 {
+    background-color: green; 
+    grid-column: span 3;   
+    height: 60px;
+}
+.green-item2 {
+    background-color: green;
+    grid-row: span 3;
+    border: 1px solid black;
+    height: 120px;
+}
+.green-container > * {
+    background-color: green;
+    border: 1px solid black;
+}   
+.green-item3, .green-item5 {
+    height: 50px;
+}
 
 </style>
-
+</head>
 <body>
+<div class="red-container">
+    <div class="red-item1">One</div>
+    <div class="red-item2">Two</div>
+    <div class="red-item3">Three</div>
+    <div class="red-item4">Four</div>
+    <div class="red-item5">Five</div>
+</div>
 
-    
+
+<div class="green-container">
+    <div class="green-item1">One</div>
+    <div class="green-item2">Two</div>
+    <div class="green-item3">Three</div>
+    <div class="green-item4">Four</div>
+    <div class="green-item5">Five</div>
+    </div>
 </body>
+
+</html>
