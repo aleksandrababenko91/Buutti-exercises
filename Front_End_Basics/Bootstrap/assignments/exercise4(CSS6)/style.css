@@ -1,23 +1,31 @@
-#green_items > * {
-    background-color: rgb(64, 233, 64);
+.green-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.green-container > div {
+    background-color: greenyellow;
     width: 8rem;
     height: 25vh;
     border-style: solid;
     border-color: black;
     border-width: 1px;
-    margin: 0px 80px;
 }
-#red_items > * {
-    height: 8rem;
+.red-container {
+    display: flex;
+    width: 100%;
+}
+.red-container > div {
     background-color: red;
+    height: 12vh;
     border-style: solid;
     border-color: black;
     border-width: 1px;
 }
-.custom-red-element {
-    width: 40%;
+.flex-grow-1 {
+    flex-grow: 1;
 }
-
-.red-containers {
-    width: 100%;
+.flex-grow-3 {
+    flex-grow: 3;
 }
+  

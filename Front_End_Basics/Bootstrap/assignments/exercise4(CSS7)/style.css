@@ -1,8 +1,37 @@
-#red_items > * {
-    height: 8rem;
+.red-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 120px;
+}
+
+.red-container > * {
     background-color: red;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    width: 10%;
+    border: 1px solid black;
+}
+
+.green-container {
+    display: grid;
+}
+
+.green-item1 {
+    background-color: green;
+    grid-column: span 3;
+    height: 60px;
+}
+
+.green-item2 {
+    background-color: green;
+    grid-row: span 3;
+    border: 1px solid black;
+    height: 120px;
+}
+
+.green-container > * {
+    background-color: green;
+    border: 1px solid black;
+}
+
+.green-item3, .green-item5 {
+    height: 50px;
 }
