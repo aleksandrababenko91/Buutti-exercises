@@ -13,5 +13,11 @@
     border-style: solid;
     border-color: black;
     border-width: 1px;
-    width: 10%;
+}
+.custom-red-element {
+    width: 40%;
+}
+
+.red-containers {
+    width: 100%;
 }

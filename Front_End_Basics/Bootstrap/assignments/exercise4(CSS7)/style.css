@@ -1,0 +1,8 @@
+#red_items > * {
+    height: 8rem;
+    background-color: red;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 10%;
+}
