@@ -1,0 +1,17 @@
+#green_items > * {
+    background-color: rgb(64, 233, 64);
+    width: 8rem;
+    height: 25vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin: 0px 80px;
+}
+#red_items > * {
+    height: 8rem;
+    background-color: red;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 10%;
+}
