@@ -1,0 +1,6 @@
+p:nth-child(even) {
+    font-weight: 900;
+}
+p:nth-child(odd) {
+    font-style: italic;
+}
