@@ -1,5 +1,4 @@
 import "./App.css";
-import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -7,19 +6,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Planets from './Planets';
+import Greetings from './Greetings';
 
-const Greetings = (props) => {
-  return (
-    <div>
-      <p>My name is {props.fullName} and my age is {props.age}</p>
-    </div>
-  );
-}
-  
-Greetings.propTypes = {
-    fullName: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired,
-  };
 
 const App = () => {   
   return (
