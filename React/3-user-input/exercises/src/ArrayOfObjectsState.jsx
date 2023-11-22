@@ -1,14 +1,13 @@
-
 const ArrayOfObjectsState = ({buttons, setButtons}) => {
   const handleClick = (index) => {
     setButtons(buttons.map((c, i) => {
       if (i === index) {
-        return c + 1;
+        return {...c, counter: c.counter  + 1 }
       } else {
         return c;
       }
     })
-    )
+    ) 
   }
   return (  
     <div>
