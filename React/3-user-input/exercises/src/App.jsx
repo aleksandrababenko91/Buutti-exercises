@@ -11,12 +11,6 @@ import Counter from './Counter.jsx'
 
 function App() {
   const [value, setValue] = useState([0, 0, 0, 0]);
-  const [buttons, setButtons] = useState([
-    { id: 1, counter: 0 },
-    { id: 2, counter: 0 },
-    { id: 3, counter: 0 },
-    { id: 4, counter: 0 },
-  ]);
 
   const [elements, setElements] = useState([
     { id: 1, counter: 0 },
@@ -30,11 +24,11 @@ function App() {
       id: uuidv4(),
       counter: 0
     }
-    setButtons([...buttons, newElement])  
+    setElements([...elements, newElement])  
   } 
 
   const deleteCounter = (id) => {
-    setButtons(buttons.filter(button => button.id !== id));
+    setElements(elements.filter(element => element.id !== id));
 };
 
   const incrementCounter = (id) => {
@@ -55,7 +49,7 @@ function App() {
         <h2>Exercise 5, 6</h2>
         <CounterButtonsArray value={value} setValue={setValue}/>
         <h2>Exercise 7: </h2>
-        <ArrayOfObjectsState buttons={buttons} setButtons={setButtons}/>
+        <ArrayOfObjectsState elements={elements} setElements={setElements}/>
         <h2>Exercise 10</h2>
         <button style={{marginTop: 20}} onClick={addNewElement}>Add a new counter!</button>
         <h2>Exercise 8,9</h2>
@@ -64,11 +58,11 @@ function App() {
         </div>
         <div>
           <h2>Exercise 11: </h2>
-          {buttons.map((button) => (
+          {elements.map((element) => (
         <Counter
-          key={button.id}
-          value={button.value}
-          onDeleteClick={() => deleteCounter(button.id)}
+          key={element.id}
+          counter={element.counter}
+          onDeleteClick={() => deleteCounter(element.id)}
           elements={elements} 
           onCounterClick={incrementCounter}
         />
