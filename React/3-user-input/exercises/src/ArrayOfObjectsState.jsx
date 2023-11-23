@@ -1,6 +1,8 @@
-const ArrayOfObjectsState = ({buttons, setButtons}) => {
+import PropTypes from 'prop-types';
+
+const ArrayOfObjectsState = ({elements, setElements}) => {
   const handleClick = (index) => {
-    setButtons(buttons.map((c, i) => {
+    setElements(elements.map((c, i) => {
       if (i === index) {
         return {...c, counter: c.counter  + 1 }
       } else {
@@ -11,13 +13,17 @@ const ArrayOfObjectsState = ({buttons, setButtons}) => {
   }
   return (  
     <div>
-      {buttons.map((button, index) => 
-       (<button key={button.id} onClick={() => handleClick(index)}>
-          {button.counter}
+      {elements.map((element, index) => 
+       (<button key={element.id} onClick={() => handleClick(index)}>
+          {element.counter}
         </button>))
       }
     </div> 
   );
 }
 
+ArrayOfObjectsState.propTypes = {
+  elements: PropTypes.number.isRequired,
+  setElements: PropTypes.func.isRequired,
+};
 export default ArrayOfObjectsState

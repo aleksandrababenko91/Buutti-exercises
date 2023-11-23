@@ -2,7 +2,7 @@ import Counter from './Counter';
 import PropTypes from 'prop-types';
 
 
-const Counters = ({ elements, onCounterClick }) => {
+const Counters = ({ elements, onCounterClick, onDeleteClick }) => {
  
   return (
     <div>
@@ -12,6 +12,7 @@ const Counters = ({ elements, onCounterClick }) => {
           id={element.id}
           counter={element.counter}
           onCounterClick={onCounterClick}
+          onDeleteClick={onDeleteClick}
         />
       ))}
     </div>
@@ -21,6 +22,7 @@ const Counters = ({ elements, onCounterClick }) => {
 Counters.propTypes = {
   elements: PropTypes.number.isRequired,
   onCounterClick: PropTypes.func.isRequired,
+  onDeleteClick: PropTypes.func.isRequired,
 };
 export default Counters;
 

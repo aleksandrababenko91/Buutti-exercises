@@ -54,7 +54,8 @@ function App() {
         <button style={{marginTop: 20}} onClick={addNewElement}>Add a new counter!</button>
         <h2>Exercise 8,9</h2>
         <div>
-          <Counters elements={elements} onCounterClick={incrementCounter} />
+          <Counters elements={elements} onCounterClick={incrementCounter} 
+                    onDeleteClick={() => deleteCounter(elements.id)}/>
         </div>
         <div>
           <h2>Exercise 11: </h2>
@@ -64,7 +65,7 @@ function App() {
           counter={element.counter}
           onDeleteClick={() => deleteCounter(element.id)}
           elements={elements} 
-          onCounterClick={incrementCounter}
+          onCounterClick={() => incrementCounter(element.id)}
         />
       ))}
     </div>
