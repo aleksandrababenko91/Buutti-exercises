@@ -55,7 +55,7 @@ function App() {
         <h2>Exercise 8,9</h2>
         <div>
           <Counters elements={elements} onCounterClick={incrementCounter} 
-                    onDeleteClick={() => deleteCounter(elements.id)}/>
+                    onDeleteClick={deleteCounter}/>
         </div>
         <div>
           <h2>Exercise 11: </h2>
