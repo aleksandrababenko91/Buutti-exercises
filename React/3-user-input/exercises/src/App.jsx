@@ -53,22 +53,18 @@ function App() {
         <h2>Exercise 10</h2>
         <button style={{marginTop: 20}} onClick={addNewElement}>Add a new counter!</button>
         <h2>Exercise 8,9</h2>
-        <div>
-          <Counters elements={elements} onCounterClick={incrementCounter} 
-                    onDeleteClick={deleteCounter}/>
-        </div>
+        <Counters elements={elements} onCounterClick={incrementCounter} onDeleteClick={deleteCounter}/>
         <div>
           <h2>Exercise 11: </h2>
           {elements.map((element) => (
-        <Counter
+          <Counter
           key={element.id}
           counter={element.counter}
           onDeleteClick={() => deleteCounter(element.id)}
           elements={elements} 
-          onCounterClick={() => incrementCounter(element.id)}
-        />
-      ))}
-    </div>
+          onCounterClick={() => incrementCounter(element.id)}/>
+          ))}
+        </div>
         
     </div>
   );
