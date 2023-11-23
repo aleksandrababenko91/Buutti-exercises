@@ -9,10 +9,16 @@ import { v4 as uuidv4 } from 'uuid';
 import Counter from './Counter.jsx'
 
 
-
 function App() {
   const [value, setValue] = useState([0, 0, 0, 0]);
   const [buttons, setButtons] = useState([
+    { id: 1, counter: 0 },
+    { id: 2, counter: 0 },
+    { id: 3, counter: 0 },
+    { id: 4, counter: 0 },
+  ]);
+
+  const [elements, setElements] = useState([
     { id: 1, counter: 0 },
     { id: 2, counter: 0 },
     { id: 3, counter: 0 },
@@ -31,6 +37,15 @@ function App() {
     setButtons(buttons.filter(button => button.id !== id));
 };
 
+  const incrementCounter = (id) => {
+    setElements(elements.map((element) => {
+      if (element.id === id) {
+        return { ...element, counter: element.counter + 1 };
+      } else {
+        return element;
+      }
+    }));
+  };
   return (
     <div className="container" >
         <h2>Exercises 1,2,3 : </h2>
@@ -44,13 +59,18 @@ function App() {
         <h2>Exercise 10</h2>
         <button style={{marginTop: 20}} onClick={addNewElement}>Add a new counter!</button>
         <h2>Exercise 8,9</h2>
-        <Counters />
         <div>
+          <Counters elements={elements} onCounterClick={incrementCounter} />
+        </div>
+        <div>
+          <h2>Exercise 11: </h2>
           {buttons.map((button) => (
         <Counter
           key={button.id}
           value={button.value}
           onDeleteClick={() => deleteCounter(button.id)}
+          elements={elements} 
+          onCounterClick={incrementCounter}
         />
       ))}
     </div>
