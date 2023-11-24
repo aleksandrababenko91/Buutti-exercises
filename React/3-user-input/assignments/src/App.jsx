@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './App.css'
 import TodoNote from './TodoNote.jsx';
 
+
+
 const defaultTodos = [
-  {id: 1, text: 'Buy potatoes', complete: false},
+  {id: 1, text: 'Buy potatoes', complete: true},
   {id: 2, text: 'Make food', complete: false},
   {id: 3, text: 'Exercise', complete: false},
   {id: 4, text: 'Do the dishes', complete: false},
@@ -25,13 +27,28 @@ const App = () => {
     }))
   };
   
+  const editTodo = (id, newText) => {
+    setTodos(todos.map((todo) => {
+      if(todo.id === id) {
+        return { 
+          ...todo, 
+          text: newText,
+        };
+      } else {
+        return todo;
+      }
+    }))
+  };
+ 
   return (
     <div>
       {todos.map((todo) => (
       <TodoNote // pass props to TodoNote
       key={todo.id} 
       todo={todo}
-      toggleCompletion={toggleCompletion}/>
+      toggleCompletion={toggleCompletion}
+      editTodo={editTodo}
+      />
       ))}
     </div>
   ) 
