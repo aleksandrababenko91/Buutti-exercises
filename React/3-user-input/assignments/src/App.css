@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.TodoNote {
+  background-color:  lightgreen;
+  padding: 10px,
+  margin: 5px,
+  borderRadius: 5px
+}
