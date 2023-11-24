@@ -12,7 +12,7 @@ const defaultTodos = [
 ]
 const App = () => {
   const [todos, setTodos] = useState(defaultTodos);
-  const handleComplete = (id) => { // chahging the state(setTodos) by func handleComplete (by ID)
+  const toggleCompletion = (id) => { // chahging the state(setTodos) by func handleComplete (by ID)
     setTodos(todos.map((todo) => {
       if (todo.id === id) {
         return {
@@ -31,7 +31,7 @@ const App = () => {
       <TodoNote // pass props to TodoNote
       key={todo.id} 
       todo={todo}
-      handleComplete={handleComplete}/>
+      toggleCompletion={toggleCompletion}/>
       ))}
     </div>
   ) 
