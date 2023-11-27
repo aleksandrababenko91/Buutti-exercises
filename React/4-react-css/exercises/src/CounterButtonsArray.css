@@ -1,0 +1,22 @@
+
+
+.container {
+  margin: 10% auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.h1 {
+  font-size: 40px;
+  font-weight: 200;
+}
+
+button {
+  border: 3px;
+  padding: 10px 15px;
+  background-color: #50a3a2;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 18px;  
+  margin-left: 30px;
+}
