@@ -58,13 +58,11 @@ const App = () => {
 
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearchQuery = (event) => {
-    const value = event.target;
+    const value = event.target.value;
     setSearchQuery(value);
   };
 
-  const filteredTodos = searchQuery
-    ? todos.filter((todo) => todo.text.includes(searchQuery))
-    : todos;
+  const filteredTodos = todos.filter((todo) => todo.text.includes(searchQuery));
   return (
     <div>
         <input placeholder="search task" type="text" onChange={handleSearchQuery}/>
