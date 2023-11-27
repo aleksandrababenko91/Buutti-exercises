@@ -8,7 +8,7 @@ import InputForm from './InputForm.jsx';
 
 
 const defaultTodos = [
-  {id: 1, text: 'Buy potatoes', complete: false},
+  {id: 1, text: 'Buy potatoes', complete: true},
   {id: 2, text: 'Make food', complete: false},
   {id: 3, text: 'Exercise', complete: false},
   {id: 4, text: 'Do the dishes', complete: false},
@@ -65,7 +65,7 @@ const App = () => {
   const filteredTodos = todos.filter((todo) => todo.text.includes(searchQuery));
   return (
     <div>
-        <input placeholder="search task" type="text" onChange={handleSearchQuery}/>
+      <input value={searchQuery} placeholder="search task" type="text" onChange={handleSearchQuery}/>
       {filteredTodos.map((todo) => (
       <TodoNote 
       key={todo.id} 

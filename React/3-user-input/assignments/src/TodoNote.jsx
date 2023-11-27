@@ -44,7 +44,7 @@ const TodoNote = ({todo, toggleCompletion, editTodo, onRemoveClick }) => {
         <input
           type="checkbox"
           onChange={handleCheckboxChange}  /// onChange works when user click the checkBox
-          value={todo.complete} // this is for visual Checkbox
+          checked={todo.complete} // this is for visual Checkbox
         />
       </p>
     </div>
