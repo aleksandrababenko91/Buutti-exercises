@@ -67,7 +67,7 @@ const App = () => {
     : todos;
   return (
     <div>
-        <input type="text" onChange={handleSearchQuery}/>
+        <input placeholder="search task" type="text" onChange={handleSearchQuery}/>
       {filteredTodos.map((todo) => (
       <TodoNote 
       key={todo.id} 
