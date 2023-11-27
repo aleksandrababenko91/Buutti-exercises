@@ -8,12 +8,12 @@ import InputForm from './InputForm.jsx';
 
 
 const defaultTodos = [
-  {id: 1, text: 'Buy potatoes', complete: true},
+  {id: 1, text: 'Buy potatoes', complete: false},
   {id: 2, text: 'Make food', complete: false},
   {id: 3, text: 'Exercise', complete: false},
   {id: 4, text: 'Do the dishes', complete: false},
   {id: 5, text: 'Floss the teeth', complete: false},
-  {id: 6, text: 'Play videogames', complete: true},
+  {id: 6, text: 'Play videogames', complete: false},
 ]
 const App = () => {
   const [todos, setTodos] = useState(defaultTodos);
