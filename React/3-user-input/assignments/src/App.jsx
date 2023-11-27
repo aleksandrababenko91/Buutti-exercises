@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css'
 import TodoNote from './TodoNote.jsx';
+import { v4 as uuidv4 } from 'uuid';
+import InputForm from './InputForm.jsx';
+
 
 
 
@@ -27,19 +30,38 @@ const App = () => {
     }))
   };
   
-  const editTodo = (id, newText) => {
+  const editTodo = (id, newText) => {  //todo editing function
     setTodos(todos.map((todo) => {
       if(todo.id === id) {
         return { 
           ...todo, 
-          text: newText,
+          text: newText,     //adding new text instead od old one
         };
       } else {
         return todo;
       }
     }))
   };
- 
+  
+  const removeTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+    }
+
+  const addTodo = (text) => {
+    const newObject = {
+      id: uuidv4(),
+      text: text, 
+      complete: false,
+    };
+    setTodos([...todos, newObject])
+  }
+
+  const [searchQuery, setSearchQuery] = useState(todos);
+  const handleSearchQuery = (event) => {
+    const value = event.target.value;
+    const filtered = todos.filter(todo => todo.text.includes(value));
+    setSearchQuery(filtered);
+  };
   return (
     <div>
       {todos.map((todo) => (
@@ -48,8 +70,18 @@ const App = () => {
       todo={todo}
       toggleCompletion={toggleCompletion}
       editTodo={editTodo}
+      onRemoveClick={() => removeTodo(todo.id)}
       />
       ))}
+      <InputForm 
+      addTodo={addTodo}></InputForm>
+      <div>
+      <input type="text" onChange={handleSearchQuery} />
+      {searchQuery.map(todos => (
+        <div key={todos.text}>
+        </div>
+      ))}
+      </div>
     </div>
   ) 
 }

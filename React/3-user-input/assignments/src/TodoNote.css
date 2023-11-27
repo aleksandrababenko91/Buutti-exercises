@@ -1,0 +1,25 @@
+input {
+  width: 100%;
+  border: 3px;
+  padding: 4px;
+  font-size: 1.2em;
+  font-family: inherit;
+  
+}
+
+button {
+  border-radius: 10px;
+}
+.remove {
+  position: relative;
+  border-color: tomato;
+}
+
+.TodoNote {
+  border-radius: 10px;
+}
+
+p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+}
