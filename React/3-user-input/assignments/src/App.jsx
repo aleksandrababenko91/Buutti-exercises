@@ -56,16 +56,20 @@ const App = () => {
     setTodos([...todos, newObject])
   }
 
-  const [searchQuery, setSearchQuery] = useState(todos);
+  const [searchQuery, setSearchQuery] = useState("");
   const handleSearchQuery = (event) => {
-    const value = event.target.value;
-    const filtered = todos.filter(todo => todo.text.includes(value));
-    setSearchQuery(filtered);
+    const value = event.target;
+    setSearchQuery(value);
   };
+
+  const filteredTodos = searchQuery
+    ? todos.filter((todo) => todo.text.includes(searchQuery))
+    : todos;
   return (
     <div>
-      {todos.map((todo) => (
-      <TodoNote // pass props to TodoNote
+        <input type="text" onChange={handleSearchQuery}/>
+      {filteredTodos.map((todo) => (
+      <TodoNote 
       key={todo.id} 
       todo={todo}
       toggleCompletion={toggleCompletion}
@@ -74,14 +78,8 @@ const App = () => {
       />
       ))}
       <InputForm 
-      addTodo={addTodo}></InputForm>
-      <div>
-      <input type="text" onChange={handleSearchQuery} />
-      {searchQuery.map(todos => (
-        <div key={todos.text}>
-        </div>
-      ))}
-      </div>
+      addTodo={addTodo}>  
+      </InputForm>
     </div>
   ) 
 }
