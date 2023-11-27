@@ -7,19 +7,23 @@ input {
   
 }
 
-button {
-  border-radius: 10px;
-}
 .remove {
-  position: relative;
-  border-color: tomato;
+  margin-left: 500px;
+  border-color: black;
+  border-width: 15px;
+  font-size: x-large;
+  background-color: blanchedalmond;
 }
 
 .TodoNote {
   border-radius: 10px;
 }
 
-p{
+p {
   font-family: 'Times New Roman', Times, serif;
   font-size: xx-large;
+}
+
+.button {
+  border-color: red;
 }

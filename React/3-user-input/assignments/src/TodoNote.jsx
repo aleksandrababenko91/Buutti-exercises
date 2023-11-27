@@ -20,12 +20,12 @@ const TodoNote = ({todo, toggleCompletion, editTodo, onRemoveClick }) => {
 
   return(
     <div className='TodoNote' style={{backgroundColor: todo.complete ? 'lightgreen': 'pink' }}>
-      <button onClick={() => onRemoveClick(todo.id)} className="remove">X</button>
+      <button onClick={() => onRemoveClick(todo.id)} className="remove">  X</button>
       <div>
       {!editMode ? (
         <div>
           <p>{editText}</p>
-          <button onClick={handleEditClick}>Edit</button> 
+          <button style={{backgroundColor: "blanchedalmond", borderColor: 'black'}} onClick={handleEditClick}>Edit</button> 
         </div>
       ) : (
         <div>
