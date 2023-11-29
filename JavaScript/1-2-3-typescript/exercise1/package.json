@@ -1,0 +1,23 @@
+{
+  "name": "serhiilessons",
+  "version": "1.0.0",
+  "description": "firstProject",
+  "main": "file.js",
+  "scripts": {
+    "ts-node": "ts-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/aleksandra_babenko/babenko-aleksandra-trainee-academy.git"
+  },
+  "author": "aleksandra babenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/aleksandra_babenko/babenko-aleksandra-trainee-academy/issues"
+  },
+  "homepage": "https://gitlab.com/aleksandra_babenko/babenko-aleksandra-trainee-academy#readme",
+  "devDependencies": {
+    "@types/node": "^20.8.0"
+  }
+}
