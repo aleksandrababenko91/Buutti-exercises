@@ -1,0 +1,17 @@
+.remove {
+  margin-left: 500px;
+  border-color: black;
+  border-width: 15px;
+  font-size: x-large;
+  background-color: blanchedalmond;
+}
+
+.TodoNote {
+  border-radius: 10px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+}
+
