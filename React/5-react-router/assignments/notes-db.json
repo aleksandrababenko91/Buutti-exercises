@@ -2,29 +2,23 @@
   "defaultTodos": [
     {
       "text": [],
-      "copmlete": false,
-      "id": 1,
-      "complete": true
-    },
-    {
-      "text": [],
       "copmlete": true,
-      "id": 2
+      "id": 1
     },
     {
       "text": "",
       "copmlete": false,
+      "id": 2
+    },
+    {
+      "text": "",
+      "copmlete": true,
       "id": 3
     },
     {
       "text": "",
       "copmlete": false,
       "id": 4
-    },
-    {
-      "text": "",
-      "copmlete": false,
-      "id": 5
     }
   ]
 }
