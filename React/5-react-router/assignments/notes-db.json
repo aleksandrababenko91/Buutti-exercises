@@ -1,98 +1,30 @@
 {
   "defaultTodos": [
     {
+      "text": [],
+      "copmlete": false,
       "id": 1,
-      "text": "Buy potatoes",
-      "complete": false
-    },
-    {
-      "id": 2,
-      "text": "Make food",
-      "complete": false
-    },
-    {
-      "id": 3,
-      "text": "Exercise",
-      "complete": false
-    },
-    {
-      "id": 4,
-      "text": "Do the dishes",
-      "complete": false
-    },
-    {
-      "id": 5,
-      "text": "Floss the teeth",
-      "complete": false
-    },
-    {
-      "id": 6,
-      "text": "Play videogames",
-      "complete": false
-    },
-    {
-      "text": [],
-      "copmlete": true,
-      "id": 7,
-      "complete": false
-    },
-    {
-      "text": "",
-      "copmlete": false,
-      "id": 8
-    },
-    {
-      "text": [],
-      "copmlete": false,
-      "id": 9
-    },
-    {
-      "text": "",
-      "copmlete": true,
-      "id": 10
-    },
-    {
-      "text": "",
-      "copmlete": false,
-      "id": 11
-    },
-    {
-      "text": "",
-      "copmlete": true,
-      "id": 12
-    },
-    {
-      "text": "",
-      "copmlete": false,
-      "id": 13
-    },
-    {
-      "text": "",
-      "copmlete": false,
-      "id": 14,
       "complete": true
     },
     {
       "text": [],
+      "copmlete": true,
+      "id": 2
+    },
+    {
+      "text": "",
       "copmlete": false,
-      "id": 15,
-      "complete": false
+      "id": 3
     },
     {
       "text": "",
-      "copmlete": true,
-      "id": 16,
-      "complete": false
-    },
-    {
-      "text": [],
-      "copmlete": true,
-      "id": 17
+      "copmlete": false,
+      "id": 4
     },
     {
       "text": "",
-      "copmlete": true,
-      "id": 18
+      "copmlete": false,
+      "id": 5
     }
   ]
 }

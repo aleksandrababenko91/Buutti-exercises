@@ -10,25 +10,16 @@ const TodoPromise = () => {
     TodoServise
       .getAll()
        .then(initialTodos => {
-       setTodos(initialTodos)
-     })
+        setTodos(initialTodos)
+      })
   }, []);
   
-  const deleteTodo = (id) => {
-    TodoServise
-    .delete(id)
-    .then(() => {
-      setTodos();   
-    });
-  };
-
   const addTodo = (event) => {
     event.preventDefault()
     const todoObject = {
       text: newTodo,
       copmlete: Math.random() > 0.5
     }
-  
     TodoServise
       .create(todoObject)
        .then(returnedTodo => {
@@ -44,10 +35,18 @@ const TodoPromise = () => {
       .update(id, changedTodo)
        .then(returnedTodo => {
        setTodos(
-  todos.map(todo => todo.id !== id ? todo : returnedTodo))
+    todos.map(todo => todo.id !== id ? todo : returnedTodo))
      })
   }
-  
+
+  const deleteNote = id => {
+    TodoServise
+    .remove(id)
+    .then(() => {
+      setTodos(todos.filter(todo => todo.id !== id));
+    });
+  };
+   
   
   return (
     <div>
@@ -63,9 +62,7 @@ const TodoPromise = () => {
         <button onClick={() => toggleComplete(todoObj.id)}>
           Toggle!
         </button>
-        <button onClick={() => deleteTodo(todoObj.id)}>
-          Delete!
-        </button>
+        <button onClick={() => deleteNote(todoObj.id)}>Delete Note</button>
         </li>
         ))}
       </ul>
