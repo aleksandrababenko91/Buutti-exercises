@@ -13,3 +13,4 @@ getUniversities();
 getUniversities().then(universities => {
     console.log(universities.map(university => university.name))
 });
+    

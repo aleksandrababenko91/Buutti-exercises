@@ -1,0 +1,5 @@
+.food {
+  display: grid;
+  justify-content: center;
+  padding-left: 550px;
+}

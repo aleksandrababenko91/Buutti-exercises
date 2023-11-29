@@ -1,26 +1,36 @@
-import React, { useState } from 'react';
+import { useState , useEffect} from 'react';
 import './App.css'
 import TodoNote from './TodoNote.jsx';
-import { v4 as uuidv4 } from 'uuid';
 import InputForm from './InputForm.jsx';
 import TodoPromise from './TodoPromise.jsx';
+import TodoServise from './TodoServise.jsx';
+
 
 const App = () => {
   const [todos, setTodos] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [newTodo, setNewTodo] = useState([]);
+
+  useEffect(() => {
+    TodoServise
+      .getAll()
+       .then(initialTodos => {
+        setTodos(initialTodos)
+      })
+  }, []);
+  
   const toggleCompletion = (id) => { // chahging the state(setTodos) by func handleComplete (by ID)
-    setTodos(todos.map((todo) => {
-      if (todo.id === id) {
-        return {
-          ...todo,
-          complete: !todo.complete,
-        };
-        
-      } else {
-        return todo;
-      }
-    }))
+    const todo = todos.find(n => n.id === id)
+    const changedTodo = { ...todo, complete: !todo.complete }
+    TodoServise
+      .update(id, changedTodo)
+       .then(returnedTodo => {
+       setTodos(
+    todos.map(todo => todo.id !== id ? todo : returnedTodo))
+     })
   };
   
+
   const editTodo = (id, newText) => {  //todo editing function
     setTodos(todos.map((todo) => {
       if(todo.id === id) {
@@ -34,20 +44,28 @@ const App = () => {
     }))
   };
   
-  const removeTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
-    }
+  const removeTodo = id => {
+    TodoServise
+    .remove(id)
+    .then(() => {
+      setTodos(todos.filter(todo => todo.id !== id));
+    });
+  };
 
-  const addTodo = (text) => {
-    const newObject = {
-      id: uuidv4(),
-      text: text, 
-      complete: false,
-    };
-    setTodos([...todos, newObject])
+  const addTodo = (event) => {
+    event.preventDefault()
+    const todoObject = {
+      text: newTodo,
+      copmlete: Math.random() > 0.5
+    }
+    TodoServise
+      .create(todoObject)
+       .then(returnedTodo => {
+       setTodos(todos.concat(returnedTodo))
+       setNewTodo('')
+      })
   }
 
-  const [searchQuery, setSearchQuery] = useState("");
   const handleSearchQuery = (event) => {
     const value = event.target.value;
     setSearchQuery(value);

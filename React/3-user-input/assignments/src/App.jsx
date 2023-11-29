@@ -62,7 +62,7 @@ const App = () => {
     setSearchQuery(value);
   };
 
-  const filteredTodos = todos.filter((todo) => todo.text.includes(searchQuery));
+  const filteredTodos = todos.filter((todo) => todo.text.toLowerCase().includes(searchQuery.toLowerCase()));
   return (
     <div>
       <input value={searchQuery} placeholder="search task" type="text" onChange={handleSearchQuery}/>

@@ -13,10 +13,10 @@ function App() {
   const [value, setValue] = useState([0, 0, 0, 0]);
 
   const [elements, setElements] = useState([
-    { id: 1, counter: 0 },
-    { id: 2, counter: 0 },
-    { id: 3, counter: 0 },
-    { id: 4, counter: 0 },
+    { id: 1, counter: 10 },
+    { id: 2, counter: 5 },
+    { id: 3, counter: 6 },
+    { id: 4, counter: 5 },
   ]);
 
   const addNewElement = () => {
@@ -40,6 +40,15 @@ function App() {
       }
     }));
   };
+
+  const [minimumCounter, setMinimumCounter] = useState(elements);
+
+  const handleFilter = (event) => {
+    const value = parseInt(event.target.value);
+    const filtered = elements.filter((element) => element.counter === value);
+    setMinimumCounter(filtered);
+  };
+
   return (
     <div className="container" >
         <h2>Exercises 1,2,3 : </h2>
@@ -63,6 +72,15 @@ function App() {
           onDeleteClick={() => deleteCounter(element.id)}
           elements={elements} 
           onCounterClick={() => incrementCounter(element.id)}/>
+          ))}
+        </div>
+        <div style={{marginTop: 20}}>
+          <input placeholder="type id" onChange={handleFilter}/>
+          {minimumCounter.map((element) => (
+          <div key={element.id}>
+            <p>Id: {element.id}</p>
+            <p>Counter: {element.counter}</p>
+          </div>
           ))}
         </div>
         

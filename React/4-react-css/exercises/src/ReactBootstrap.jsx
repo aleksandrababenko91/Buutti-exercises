@@ -6,21 +6,19 @@ const ReactBootstrap = () => {
     return (
         <Container fluid>
           <Form>
-            <div>
+            <div className="mb-3">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="type your email" size="lg"/>
+              <Form.Control type="email" placeholder="Type your email" size="lg" className="mb-2" />
             </div>
-            <div>
+            <div className="mb-3">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="type your password" size="lg"/>
+              <Form.Control type="password" placeholder="Type your password" size="lg" className="mb-2" />
             </div>
-            <div>
-              <Button size="sm" type="submit">Submit</Button>
-              <Button size="sm" type="reset">Reset form</Button>
-            </div>
+            <Button variant="success" size="lg" className="w-100 mb-2">Submit</Button>
+            <Button variant="danger" size="lg" className="w-100">Reset form</Button>
           </Form>
         </Container>
       );
 }
 
-export default ReactBootstrap
+export default ReactBootstrap;

@@ -12,13 +12,12 @@ function App() {
     <div>
 
     <div className="container" >
-      <h1>Exercise 5, 6</h1>
+      <h1>Exercise 1:</h1>
       <CounterButtonsArray value={value} setValue={setValue}/>
     </div>
     <div >
-      <h1>React Bootstrap Form </h1>
-    <ReactBootstrap></ReactBootstrap>
-
+      <h1>Exercise 2: React Bootstrap Form </h1>
+      <ReactBootstrap></ReactBootstrap>
     </div>
   </div>
   );
