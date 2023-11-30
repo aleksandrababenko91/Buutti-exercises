@@ -29,20 +29,23 @@ const App = () => {
      })
   };
   
-  const editTodo = (id, value) => {  //todo editing function
-    setTodos(todos.map((todo) => {
-      const updateTodo = { ...todo, 
-        text: value}
+
+  const editTodo = (id, value) => {  
+   const updateTodo = todos.map((todo) => {
       if(todo.id === id) {
-        TodoService
-        .update(id, updateTodo)
         return { 
-        updateTodo     //adding new text instead od old one
+          ...todo, 
+          text: value,  
         };
       } else {
         return todo;
       }
-    }))
+    })
+    TodoService
+    .update(id, updateTodo)
+    .then(newTodo => {
+      setTodos(newTodo)
+    })
   };
   
   const removeTodo = id => {
@@ -69,9 +72,7 @@ const App = () => {
     const value = event.target.value;
     setSearchQuery(value);
   };
-  
-  const filteredTodos = todos.filter((todo) => {return(todo.text.toLowerCase().includes(searchQuery.toLowerCase()))});
-  console.log(filteredTodos);
+  const filteredTodos = todos.filter((todo) => todo.text.includes(searchQuery));
 
   return (
     <div className='container'>
