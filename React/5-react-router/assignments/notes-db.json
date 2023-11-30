@@ -1,52 +1,5 @@
 {
   "defaultTodos": [
-    {
-      "0": {
-        "id": 4,
-        "text": "jack",
-        "complete": false
-      },
-      "1": {
-        "id": 5,
-        "text": "jjjj",
-        "complete": false
-      },
-      "2": {
-        "id": 6,
-        "text": "Play videogames",
-        "complete": false
-      },
-      "3": {
-        "text": "Manicure",
-        "complete": false,
-        "id": 7
-      },
-      "4": {
-        "text": "Pedicure",
-        "complete": false,
-        "id": 8
-      },
-      "id": 4
-    },
-    {
-      "id": 5,
-      "text": "jjjj",
-      "complete": false
-    },
-    {
-      "id": 6,
-      "text": "Play videogames",
-      "complete": false
-    },
-    {
-      "text": "Manicure",
-      "complete": false,
-      "id": 7
-    },
-    {
-      "text": "Pedicure",
-      "complete": false,
-      "id": 8
-    }
+   
   ]
 }

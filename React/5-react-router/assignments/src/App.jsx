@@ -29,7 +29,6 @@ const App = () => {
      })
   };
   
-
   const editTodo = (id, value) => {  
    const updateTodo = todos.map((todo) => {
       if(todo.id === id) {
@@ -64,7 +63,7 @@ const App = () => {
     TodoService
       .create(todoObject)
        .then(returnedTodo => {
-       setTodos(todos.concat(returnedTodo))
+       setTodos([...todos, returnedTodo])
       })
   }
 
@@ -72,7 +71,8 @@ const App = () => {
     const value = event.target.value;
     setSearchQuery(value);
   };
-  const filteredTodos = todos.filter((todo) => todo.text.includes(searchQuery));
+  const filteredTodos = todos.filter((todo) => todo.text.toLowerCase().includes(searchQuery.toLowerCase()));
+
 
   return (
     <div className='container'>
