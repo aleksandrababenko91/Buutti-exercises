@@ -30,22 +30,21 @@ const App = () => {
   };
   
   const editTodo = (id, value) => {  
-   const updateTodo = todos.map((todo) => {
+    let newTodo = {}
+    const updateTodo = todos.filter((todo) => {
       if(todo.id === id) {
-        return { 
-          ...todo, 
-          text: value,  
-        };
+        newTodo = {...todo, text: value}
+        return newTodo;
       } else {
         return todo;
       }
     })
     TodoService
-    .update(id, updateTodo)
-    .then(newTodo => {
-      setTodos(newTodo)
-    })
-  };
+    .update(id, newTodo)
+      setTodos(updateTodo)
+    };
+
+  
   
   const removeTodo = id => {
     TodoService

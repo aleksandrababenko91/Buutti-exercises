@@ -1,5 +1,19 @@
 {
   "defaultTodos": [
-   
+    {
+      "text": "have a lanch",
+      "complete": false,
+      "id": 4
+    },
+    {
+      "text": "good luck",
+      "complete": false,
+      "id": 5
+    },
+    {
+      "text": "hshhhshshsddddd",
+      "complete": true,
+      "id": 6
+    }
   ]
 }
