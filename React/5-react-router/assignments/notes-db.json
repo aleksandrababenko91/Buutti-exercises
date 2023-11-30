@@ -2,7 +2,7 @@
   "defaultTodos": [
     {
       "id": 4,
-      "text": "'Do the dishes'",
+      "text": "hghghgh",
       "complete": false
     },
     {
@@ -14,6 +14,16 @@
       "id": 6,
       "text": "Play videogames",
       "complete": false
+    },
+    {
+      "text": "Manicure",
+      "complete": false,
+      "id": 7
+    },
+    {
+      "text": "Pedicure",
+      "complete": false,
+      "id": 8
     }
   ]
 }

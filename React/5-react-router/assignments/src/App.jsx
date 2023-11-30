@@ -10,7 +10,6 @@ const App = () => {
   const [todos, setTodos] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
-
   useEffect(() => {
     TodoService
       .getAll()
@@ -30,13 +29,15 @@ const App = () => {
      })
   };
   
-
   const editTodo = (id, value) => {  //todo editing function
     setTodos(todos.map((todo) => {
+      const updateTodo = { ...todo, 
+        text: value}
       if(todo.id === id) {
+        TodoService
+        .update(id, updateTodo)
         return { 
-          ...todo, 
-          text: value,     //adding new text instead od old one
+        updateTodo     //adding new text instead od old one
         };
       } else {
         return todo;
@@ -68,7 +69,9 @@ const App = () => {
     const value = event.target.value;
     setSearchQuery(value);
   };
-  const filteredTodos = todos.filter((todo) => todo.text.toLowerCase().includes(searchQuery.toLowerCase()));
+  
+  const filteredTodos = todos.filter((todo) => {return(todo.text.toLowerCase().includes(searchQuery.toLowerCase()))});
+  console.log(filteredTodos);
 
   return (
     <div className='container'>
