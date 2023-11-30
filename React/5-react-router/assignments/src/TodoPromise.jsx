@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import TodoServise from './TodoServise.jsx';
+import TodoService from './TodoService.jsx';
 
 
 const TodoPromise = () => {
@@ -7,7 +7,7 @@ const TodoPromise = () => {
   const [newTodo, setNewTodo] = useState([]);
 
   useEffect(() => {
-    TodoServise
+    TodoService
       .getAll()
        .then(initialTodos => {
         setTodos(initialTodos)
@@ -20,7 +20,7 @@ const TodoPromise = () => {
       text: newTodo,
       copmlete: Math.random() > 0.5
     }
-    TodoServise
+    TodoService
       .create(todoObject)
        .then(returnedTodo => {
        setTodos(todos.concat(returnedTodo))
@@ -31,7 +31,7 @@ const TodoPromise = () => {
   const toggleComplete = id => {
     const todo = todos.find(n => n.id === id)
     const changedTodo = { ...todo, complete: !todo.complete }
-    TodoServise
+    TodoService
       .update(id, changedTodo)
        .then(returnedTodo => {
        setTodos(
@@ -40,7 +40,7 @@ const TodoPromise = () => {
   }
 
   const deleteNote = id => {
-    TodoServise
+    TodoService
     .remove(id)
     .then(() => {
       setTodos(todos.filter(todo => todo.id !== id));

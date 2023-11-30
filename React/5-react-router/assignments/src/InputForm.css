@@ -1,5 +1,4 @@
 form {
-  position: relative;
   width: 480px;
   margin: 30px auto 20px auto;
   background: #fff;
@@ -11,8 +10,49 @@ form {
 input {
   width: 100%;
   border: 3px;
-  padding: 4px;
+  padding: 0px;
   font-size: 1.2em;
   font-family: inherit;
-  
+}
+
+.search {
+  padding: 10px 15px;
+  margin: 20px;
+  width: 90%;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: #373D41;
+  background-color: #FFF;
+  background-clip: padding-box;
+  border-radius: 6px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  flex-grow: 1;
+}
+
+input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  width: 250px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  font-weight: 300;
+}
+
+.button {
+  appearance: none;
+  outline: 0;
+  background-color: rgb(231, 155, 155);
+  border: 3px;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  width: 250px;
+  font-size: 18px;
 }

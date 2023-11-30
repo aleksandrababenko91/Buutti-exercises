@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './TodoNote.css'
 
 const TodoNote = ({todo, toggleCompletion, editTodo, onRemoveClick }) => {
@@ -20,12 +20,12 @@ const TodoNote = ({todo, toggleCompletion, editTodo, onRemoveClick }) => {
 
   return(
     <div className='TodoNote' style={{backgroundColor: todo.complete ? 'lightgreen': 'pink' }}>
-      <button onClick={() => onRemoveClick(todo.id)} className="remove">  X</button>
+      <button onClick={() => onRemoveClick(todo.id)} className="remove">X</button>
       <div>
       {!editMode ? (
         <div>
           <p>{editText}</p>
-          <button style={{backgroundColor: "blanchedalmond", borderColor: 'black'}} onClick={handleEditClick}>Edit</button> 
+          <button style={{backgroundColor: "blanchedalmond", borderColor: 'black', color: 'black'}} onClick={handleEditClick}>Edit</button> 
         </div>
       ) : (
         <div>
@@ -41,7 +41,7 @@ const TodoNote = ({todo, toggleCompletion, editTodo, onRemoveClick }) => {
     </div>
       <p>
         Complete:
-        <input
+        <input style={{backgroundColor: "aliceblue"}}
           type="checkbox"
           onChange={handleCheckboxChange}  /// onChange works when user click the checkBox
           checked={todo.complete} // this is for visual Checkbox

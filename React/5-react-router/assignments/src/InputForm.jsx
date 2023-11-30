@@ -2,10 +2,10 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './InputForm.css'
 
-
 const InputForm = ({addTodo}) => {
   const [newTodo, setNewTodo] = useState("")
   const handleInputForm = (event) => {
+    console.log(event);
     event.preventDefault();
     addTodo(newTodo)
     setNewTodo("");
@@ -17,7 +17,7 @@ return(
       value={newTodo}
       onChange={(event) => setNewTodo(event.target.value)}
       />
-      <input type="submit" value="Submit" />
+      <input className="button" type="submit" value="Submit" />
     </form>
   </div>
 )
