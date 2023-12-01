@@ -30,21 +30,10 @@ const App = () => {
   };
   
   const editTodo = (id, value) => {  
-    let newTodo = {}
-    const updateTodo = todos.filter((todo) => {
-      if(todo.id === id) {
-        newTodo = {...todo, text: value}
-        return newTodo;
-      } else {
-        return todo;
-      }
-    })
+    const updatedTodo = todos.find(todo => todo.id === id)
     TodoService
-    .update(id, newTodo)
-      setTodos(updateTodo)
-    };
-
-  
+    .update(id, {...updatedTodo, text: value})
+  };
   
   const removeTodo = id => {
     TodoService

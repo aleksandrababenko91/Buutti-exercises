@@ -1,17 +1,27 @@
 {
   "defaultTodos": [
     {
-      "text": "have a lanch",
+      "text": "party",
+      "complete": false,
+      "id": 2
+    },
+    {
+      "text": "cooking",
+      "complete": false,
+      "id": 3
+    },
+    {
+      "text": "manicurejjj",
       "complete": false,
       "id": 4
     },
     {
-      "text": "good luck",
+      "text": "hi there",
       "complete": false,
       "id": 5
     },
     {
-      "text": "hshhhshshsddddd",
+      "text": "kkkkhhh",
       "complete": true,
       "id": 6
     }
